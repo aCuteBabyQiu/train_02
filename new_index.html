@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <title>阿秋空间</title>
+    <link rel="stylesheet" href="css/site.min.css">
+  </head>
+  <body>
+    <canvas class="canvas"></canvas>
+
+    <div class="check">👉点击我</div> 
+
+    <div class="ui" style="display: none;">
+      <input class="ui-input" type="text" />
+      <span class="ui-return">↵</span>
+    </div>
+
+    <div class="overlay">
+
+
+      <div class="tabs">
+        <div class="tabs-labels"><span class="tabs-label myself_link">个人链接</span><span class="tabs-label friend_link">友情链接</span><span class="tabs-label other_fun">其他好玩的</span></div>
+
+        <div class="tabs-panels myself_link_body">
+          <ul class="tabs-panel commands">
+            <li class="commands-item"><span class="link-info">页面A</span><a href="a.html" class="link-action">go</a></li>
+            <li class="commands-item"><span class="link-info">页面B</span><a href="b.html" class="link-action">go</a></li>
+           	
+          </ul>
+      </div>
+      <div class="tabs-panels friend_link_body">
+          <ul class="tabs-panel commands">
+            <li class="commands-item"><span class="link-info">3d文字动画作者</span><a href="http://www.jq22.com/jquery-info22631" class="link-action">go</a></li>
+            <li class="commands-item"><span class="link-info">参考git连接远程仓库小记</span><a href="https://www.cnblogs.com/surfingcat/p/12929940.html" class="link-action">go</a></li>
+          </ul>
+      </div>
+      <div class="tabs-panels other_fun_body">
+          <ul class="tabs-panel commands">
+            <li class="commands-item"><span class="commands-item-title">文本3</span><span class="commands-item-info" data-demo="Hello :)">任何类型</span><span class="commands-item-action">演示</span></li>
+            <li class="commands-item"><span class="commands-item-title">倒数</span><span class="commands-item-info" data-demo="#countdown 10">#countdown<span class="commands-item-mode">number</span></span><span class="commands-item-action">演示</span></li>
+            <li class="commands-item"><span class="commands-item-title">图标</span><span class="commands-item-info" data-demo="#icon thumbs-up">#icon<span class="commands-item-mode">name</span>&nbsp;(using <a href="//fortawesome.github.io/Font-Awesome/#icons-new" target="_blank">Font Awesome</a>)</span><span class="commands-item-action">演示</span></li>
+            <li class="commands-item"><span class="commands-item-title">时间</span><span class="commands-item-info" data-demo="#time">#time</span><span class="commands-item-action">演示</span></li>
+            <li class="commands-item"><span class="commands-item-title">图形</span><span class="commands-item-info" data-demo="#rectangle 30x15">#rectangle<span class="commands-item-mode">宽 x 高</span></span><span class="commands-item-action">演示</span></li>
+            <li class="commands-item"><span class="commands-item-title">圆</span><span class="commands-item-info" data-demo="#circle 25">半径<span class="commands-item-mode"></span></span><span class="commands-item-action">演示</span></li>
+
+            <li class="commands-item commands-item--gap"><span class="commands-item-title">动画</span><span class="commands-item-info" data-demo="The time is|#time|#countdown 3|#icon thumbs-up"><span class="commands-item-mode">命令1</span>&nbsp;|<span class="commands-item-mode">命令2</span></span><span class="commands-item-action">演示</span></li>
+          </ul>
+      </div>
+    </div>
+
+    <script src="js/shape-shifter.js"></script>
+  </body>
+</html>
