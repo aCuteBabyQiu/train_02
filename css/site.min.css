@@ -290,9 +290,11 @@ body, .overlay {
     letter-spacing: 1px;
     padding: 20px;
     background: #fff;
-    margin-top: 1px;
+    /*margin-top: 1px;*/
     color: #333;
     opacity: .9;
+    border-radius: .3rem;
+    margin: .2rem 0;
     -webkit-transition: -webkit-transform .7s cubic-bezier(0.694, .0482, .335, 1), opacity .1s cubic-bezier(0.694, .0482, .335, 1);
     -moz-transition: -moz-transform .1s cubic-bezier(0.694, .0482, .335, 1), opacity .1s cubic-bezier(0.694, .0482, .335, 1);
     -ms-transition: -ms-transform .1s cubic-bezier(0.694, .0482, .335, 1), opacity .1s cubic-bezier(0.694, .0482, .335, 1);
@@ -357,6 +359,7 @@ body, .overlay {
     margin-bottom: 9px
 }
 .tabs-label {
+    border-radius: .3rem;
     display: inline-block;
     background: #fff;
     padding: 10px 20px;
