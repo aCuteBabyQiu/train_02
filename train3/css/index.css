@@ -53,6 +53,9 @@ p{
     text-indent: 2em;
     padding-left: 8px;
 }
+p::first-letter{
+    font-size: 32px;
+}
 td span::before{
     content: "￥";
 }
