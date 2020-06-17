@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>danmu</title>
+    <script src="js/openBSE.all.js">
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        #danmu{
+            width: 600px;
+            height: 500px;
+            margin: 3rem auto 2rem auto;
+            background-color: #e3e3e3;
+            border-radius:.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="danmu"></div>
+    <p><input type="text" style="width:500px;" id="BulletScreenText">&nbsp;<a href="#" onclick="sendBulletScreen();">发送</a></p>
+
+    <script>
+        var bulletScreenEngine = new openBSE.BulletScreenEngine(document.getElementById('danmu'));
+        // var _startTime = 5000;
+        // for (var i = 0; i < 10000; i++) {
+        //     bulletScreenEngine.addBulletScreen({
+        //         text: "这是一个长长长长长长长长长长长长长长长长长长长长长长长长的测试(^_^)",
+        //         startTime: _startTime
+        //     });
+        //     _startTime += parseInt(Math.random() * 300);
+        // }
+        bulletScreenEngine.play();
+        function sendBulletScreen() {
+            var bulletScreenText = document.getElementById("BulletScreenText").value;
+            document.getElementById("BulletScreenText").value = '';
+            bulletScreenEngine.addBulletScreen({
+                text: bulletScreenText,
+                style: {
+                    boxColor: 'white'
+                },
+                layer: 1,
+                canDiscard: false
+            });
+        }
+    </script>
+    
+</body>
+
+</html>
