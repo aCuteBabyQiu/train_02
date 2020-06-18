@@ -1,29 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script src="js/index.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>danmu</title>
+    <script src="/js/openBSE.all.js">
+    </script>
+    <script src="/js/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0 0;
+            padding: 0 0;
+        }
+
+        html{
+            margin: 0 0;
+            background-color: #b3c2c5;
+        }
+        #box {
+            padding: 1rem 0;
+        }
+
+        #danmu {
+            height: 500px;
+            margin: 3rem;
+            background: url(https://s1.ax1x.com/2020/06/18/NeCNxe.png) center no-repeat;
+            background-size: 100%;
+            border-radius: .3rem;
+        }
+
+        #in {
+            padding: 2rem 0;
+            margin: 0 auto;
+            text-align: center;
+            text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15);
+            font-weight: bold;
+            cursor: pointer;
+            font-family: Titillium Web, PingFang SC, Hiragino Sans GB, "Microsoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+        a{
+            color: rgb(133, 93, 93) !important;
+            text-decoration: none;
+            font-size: 20px;
+           
+        }
+        p{
+            padding: 16px;
+            text-align: center;
+        }
+        button{
+            width: 55px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            vertical-align: middle;
+            margin-right: 16px;
+        }
+        input{
+            outline: none;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="con">      
-      <div id="screen">
-        <div class="dm_show">
-          <!-- <div>text message</div> -->
-        </div>
-      </div>
-      <div class="edit">
-        <p>
-          <input placeholder="说点什么吧？" class="content" type="text" />
-        </p>
-        <p>
-          <input type="button" class="send" value="发送" />
-          <input type="button" class="clear" value="清屏" />
-        </p>
-      </div>   
+    <div id="box">
+        <div id="danmu"></div>
     </div>
-  </body>
+    <div id="in">
+        <p><input type="text" style="width:300px;height: 30px;border-radius: 5px;border: 1px solid rgb(241, 237, 237);" id="BulletScreenText">&nbsp;
+            <button> <a href="#" onclick="sendBulletScreen();">发送</a></button>
+        </p>
+
+        <p> <button><a href="#" onclick="test();">测试</a></button>
+            <button><a href="#" onclick="bulletScreenEngine.pause();">暂停</a></button>
+            <button><a href="#" onclick="bulletScreenEngine.play();">继续</a></button>
+            <button><a href="#" onclick="bulletScreenEngine.stop();">清空</a></button>
+        </p>
+    </div>
+
+    <script>
+        var bulletScreenEngine = new openBSE.BulletScreenEngine(document.getElementById('danmu'));
+
+        bulletScreenEngine.play();
+
+        function sendBulletScreen() {
+            var bulletScreenText = document.getElementById("BulletScreenText").value;
+            document.getElementById("BulletScreenText").value = '';
+            bulletScreenEngine.addBulletScreen({
+                text: bulletScreenText,
+                style: {
+                    color: randomColor()
+                },
+                layer: 1,
+                canDiscard: false
+            });
+        }
+
+        function test() {
+            var _startTime = 5000;
+            for (var i = 0; i < 10000; i++) {
+                bulletScreenEngine.addBulletScreen({
+                    text: "这是一个长长长长长长长长长长长长长长长长长长长长长长长长的测试(^_^)",
+                    startTime: _startTime,
+                    style: {
+                        color: randomColor()
+                    }
+                });
+                _startTime += parseInt(Math.random() * 600);
+            }
+
+        }
+
+        function randomColor() {
+            switch (randomNumber()) {
+                case 1:
+                case 5:
+                    return "#ffbe76";
+                case 2:
+                case 6:
+                    return "#dff9fb";
+                case 3:
+                case 7:
+                    return "#686de0";
+                case 4:
+                case 8:
+                    return "#22a6b3";
+                case 5:
+                case 9:
+                    return "#95afc0";
+                case 0:
+                    return "#b8e994";
+                case 1:
+                    return "#1e3799";
+                default:
+                    return "#eb2f06";
+            }
+        }
+
+        function randomNumber() {
+            return Math.floor(Math.random() * 10);
+        }
+    </script>
+
+</body>
+
 </html>
