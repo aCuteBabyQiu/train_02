@@ -14,10 +14,11 @@
             padding: 0 0;
         }
 
-        html{
+        html {
             margin: 0 0;
             background-color: #82ccdd;
         }
+
         #box {
             padding: 1rem 0;
         }
@@ -39,7 +40,8 @@
             cursor: pointer;
             font-family: Titillium Web, PingFang SC, Hiragino Sans GB, "Microsoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
         }
-        a{
+
+        a {
             color: #eee !important;
         }
     </style>
@@ -67,8 +69,11 @@
             document.getElementById("BulletScreenText").value = '';
             bulletScreenEngine.addBulletScreen({
                 text: bulletScreenText,
+                type: returnType(),
                 style: {
-                    color: randomColor()
+                    color: randomColor(),
+                    size: randomNumber() + 15,
+                    speed: randomSpeed(),
                 },
                 layer: 1,
                 canDiscard: false
@@ -81,8 +86,11 @@
                 bulletScreenEngine.addBulletScreen({
                     text: "这是一个长长长长长长长长长长长长长长长长长长长长长长长长的测试(^_^)",
                     startTime: _startTime,
+                    type:returnType(),
                     style: {
-                        color: randomColor()
+                        color: randomColor(),
+                        size: randomNumber() + 15,
+                        speed: randomSpeed(),
                     }
                 });
                 _startTime += parseInt(Math.random() * 600);
@@ -90,6 +98,7 @@
 
         }
 
+        // 随机颜色
         function randomColor() {
             switch (randomNumber()) {
                 case 1:
@@ -115,10 +124,48 @@
                     return "#eb2f06";
             }
         }
-
+        //随机速度
+        function randomSpeed() {
+            switch (randomNumber()) {
+                case 1:
+                case 5:
+                    return 0.15;
+                case 2:
+                case 6:
+                    return 0.17;
+                case 3:
+                case 7:
+                    return 0.19;
+                case 4:
+                case 8:
+                    return 0.21;
+                case 5:
+                case 9:
+                    return 0.13;
+                case 0:
+                    return 0.11;
+                case 1:
+                    return 0.09;
+                default:
+                    return 0.16;
+            }
+        }
+        // 随机位置 上 下 右边  业务逻辑不允许绝对意义上的随机弹幕，会发生弹幕重叠，这是不愿意看到的情况
+        function returnType(){
+            var i = randomNumber();
+            if(i < 3){
+                return openBSE.BulletScreenType.rightToRight;
+            }else if(3 <= i && i > 6){
+                return openBSE.BulletScreenType.top;
+            }else{
+                return openBSE.BulletScreenType.bottom;
+            }
+        }
+        // 随机一个0-9的整数
         function randomNumber() {
             return Math.floor(Math.random() * 10);
         }
+        
     </script>
 
 </body>
