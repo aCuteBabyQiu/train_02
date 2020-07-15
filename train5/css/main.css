@@ -10,7 +10,7 @@
     border-radius: 10px;
     float: left;
     margin-left: 10px;
-   margin-top: 10px;
+    margin-top: 10px;
 }
 #news{
    padding-left: 20px;
@@ -32,6 +32,9 @@
 }
 #id11,#id22,#id33,#id44,#id55,#id66,#id77,#id88{
     padding: 10px;
+}
+#fenye{
+    text-align: center;
 }
 #footer{
     background-color: rgb(204, 199, 199);

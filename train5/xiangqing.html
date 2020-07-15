@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于</title>
+    <!-- <script type="test/javascript" src="js/jquery.min.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+    <script src="js/baiduMap.js"></script>
+    <link rel="stylesheet" href="css/xiangqing.css">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div id="head" class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <nav class="navbar navbar-none" role="navigation">
+                        <div id="id1" class="container-fluid"> 
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target="#example-navbar-collapse">
+                                <span class="sr-only">切换导航</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a id="aa" class="navbar-brand" href="#">阿秋的企业站</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="index.html">首页</a></li>
+                                <li><a href="main.html">主栏</a></li>
+                                <li><a href="about.html">关于</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        喜好 <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">奶茶系列</a></li>
+                                        <li><a href="#">炸鸡系列</a></li>
+                                        <li><a href="#">冰淇淋系列</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">关于我</a></li>                                       
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                  <hr id="hrr">
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <h4 id="news">详情页面 <span id="new">NEWS!</span></h4>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p id="ice">《冰淇淋》夏天到了，就是要吃冰淇淋哦!!!</p>
+                </div>
+                <div id="time" class="col-md-12 col-sm-12 col-xs-12">
+                  
+                </div> 
+            </div>
+        </div><br><br>
+    </div><br>
+    <div class="container">
+        <div class="row">
+            <div id="img6" class="col-md-12 col-sm-12 col-xs-12">
+                <img src="img/6.gif" alt="">
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <p>
+                 <p id="p1">奶油冰淇淋：主要以“奶油”为原料制作的冰淇淋，口感润滑舒爽，但也同时带有奶油的高热量等危害</p> 
+                 <p id="p2">酸奶冰淇淋：以“酸奶”冰淇淋粉或者浆料为原料，使用酸奶冰淇淋机制作的冰淇淋甜品。
+                     富含活性益生菌，有助提高免疫力。现已在欧美国家非常流行，并已经开始在中国国内受到欢迎。</p> 
+                 <p id="p3">果蔬冰淇淋：采用“鲜奶液和鲜果酱”结合而成的软式冰淇淋。</p>  
+                 <p id="p4">圣代：圣代用牛奶、糖果肉、果汁、果酱、奶油等“多种主料混合”做成的软式冰淇淋（部分圣代还有蛋黄）。
+                     有草莓、樱桃、巧克力、水蜜桃等口味。</p>  
+                </p>
+            </div>
+        </div>
+       
+    </div>
+<br><br>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                </div>
+                <div id="footer_img" class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="img/qq.jpg" alt="">
+                </div>
+            </div>
+            <p id="Copy">
+                版权所有 &copy; 阿秋
+            </p>
+        </div>
+    </div>
+
+</body>
+<script>
+    // 传入参数
+// fmt  时间格式  String
+// date  被格式化的时间  Date
+function dateFormat(fmt, date) {
+    // 给定默认格式和默认为当前时间
+    let _fmt = (fmt == null || fmt == "" ? "YYYY-mm-dd HH:MM:SS" : fmt);
+    let _date = (date == null ? new Date() : date)
+    let ret;
+    const opt = {
+        "Y+": _date.getFullYear().toString(),        // 年
+        "m+": (_date.getMonth() + 1).toString(),     // 月
+        "d+": _date.getDate().toString(),            // 日
+        "H+": _date.getHours().toString(),           // 时
+        "M+": _date.getMinutes().toString(),         // 分
+        "S+": _date.getSeconds().toString()          // 秒
+        // 有其他格式化字符需求可以继续添加，必须转化成字符串
+    };
+    for (let k in opt) {
+        ret = new RegExp("(" + k + ")").exec(_fmt);
+        if (ret) {
+            _fmt = _fmt.replace(ret[1], (ret[1].length == 1) ? (opt[k]) : (opt[k].padStart(ret[1].length, "0")))
+        };
+    };
+    return _fmt;
+}
+
+// 传入参数  
+//  where  元素id     String
+//  time   每次执行间隔时间（单位毫秒 ms)   String 
+function timing(where,time) {
+    if (where == null || where == "" ) {
+        return console.log("需指定元素！");
+    }
+    let _where = document.getElementById(where);
+    let _time = time == null || time == "" ? "1000" : time;
+    setInterval(function(){_where.innerText = dateFormat()},time);
+}
+
+$(function () {
+            timing('time')
+        })
+</script>
+</html>
