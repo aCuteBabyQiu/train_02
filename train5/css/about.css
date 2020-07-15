@@ -1,6 +1,17 @@
 #header{
     background-color: rgba(243, 242, 242, 0.795);
 }
+#guanyu{
+    text-align: center;
+    margin: 20px;
+}
+#aa{
+    font-size: 28px;
+}
+.container > #middle > #info >a{
+    font-size: 16px;
+    color: gray;
+}
 #header > .container >#head{
     padding: 40px;
 }

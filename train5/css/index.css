@@ -2,14 +2,32 @@ body{
     margin: 0;
     padding: 0;
 }
+
+#id1{
+    margin-top: 30px;
+}
+#aa{
+    font-size: 28px;
+}
 a{
     text-emphasis: none;
     color: gray;
 }
 p{
     text-align: justify;
-   text-indent: 2em;
-   
+     text-indent: 2em;  
+}
+#menu{
+    height: 200px;
+    background-color: rgba(243, 242, 242, 0.795);
+}
+#caipin{
+    text-align: center;
+    margin-top: 20PX;
+}
+#xihao{
+    text-align: center;
+    margin-top: 20PX;  
 }
 .container > .row > div >h3,.container > .row > div >h4{
     line-height: 70px;
@@ -77,7 +95,7 @@ hr{
 .container > .row > #imgbox9 >p,.container > .row > #imgbox10 >p,
 .container > .row > #imgbox11 >p,.container > .row > #imgbox12 >p,
 .container > .row > #imgbox13 >p,.container > .row > #imgbox14 >p{
-    text-align: center;
+    text-align: justify;
 }
 
 .container > .row > #imgbox7 >img:hover,.container > .row > #imgbox8 >img:hover,
@@ -166,6 +184,9 @@ hr{
     #ftimg img{
         width: 50%;
     }
+    p{
+        font-size: 14px;
+    }
 }
  
 @media screen and (max-width: 1199px) and (min-width:970px){
@@ -175,12 +196,18 @@ hr{
     #ftimg img{
         width: 50%;
     }
+    p{
+        font-size: 10px;
+    }
 }
 @media screen and (max-width: 969px) and (min-width:420px){
     #ftimg img{
         
         width: 100%;
         
+    }
+    p{
+        font-size: 8px;
     }
 } /*
 @media screen and (max-width: 969px) and (min-width:420px){

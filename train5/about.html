@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于</title>
-    <script type="test/javascript" src="js/jquery.min.js"></script>
-    <script type="test/javascript" src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <script type="test/javascript" src="js/jquery.min.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+    <script src="js/baiduMap.js"></script>
+
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div id="header">
         <div class="container">
             <div id="head" class="row">
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                    <h3>吃货联盟</h3>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                   <ul>
-                       <li><a href="index.html">首页</a></li>
-                       <li><a href="#">主栏</a></li>
-                       <li><a href="#">关于</a></li>
-                   </ul>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <nav class="navbar navbar-none" role="navigation">
+                        <div id="id1" class="container-fluid"> 
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target="#example-navbar-collapse">
+                                <span class="sr-only">切换导航</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a id="aa" class="navbar-brand" href="#">阿秋的企业站</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="index.html">首页</a></li>
+                                <li><a href="main.html">主栏</a></li>
+                                <li><a href="about.html">关于</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        喜好 <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">奶茶系列</a></li>
+                                        <li><a href="#">炸鸡系列</a></li>
+                                        <li><a href="#">冰淇淋系列</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">关于我</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
-            <div id="me" class="row">
-                <div>
-                    <p>关于我们</p>
-                </div>
-            </div>
+            
         </div>
     </div>
     <div class="container">
         <div id="middle" class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                
+            <div class="col-md-6 col-sm-6 col-xs-12" style="height: 350px;">
+                <div id="baiduMap_box"></div>
             </div>
-            <div id="info" class="col-md-6 col-sm-6 col-xs-12">
+            <div id="info" class="col-md-6 col-sm-6 col-xs-12" >
+                <h3 id="guanyu">关于我们</h3>
                 <p>
                     吃货，在传统和当下也随各地历史文化和方言发音有着各种解释。
                     吃货最早出现在1991年的电视剧《编辑部的故事》中第七集《水淹七军》
@@ -48,23 +77,18 @@
                     他们是凡间的美食家，但与美食家不同，他们随性而来，慢慢品味，即使是街边小吃，
                     他们也会品味厨师在料理当中的那一点点心意。给予人们美好的赞美，认同别人，
                     给人勇气！使生活充满了希冀。
-                </p>
-                <!-- <address>银河市地球村中国区阿秋的小窝</address> -->
-                <a href="address">银河市地球村中国区阿秋的小窝</a><br>
-                <a href="tel">10086</a><br>
-                <a href="mailto">111111@qq.com</a>
-                <h3>地址</h3>
-                <h3>邮箱</h3>
-                <h3>电话</h3>
+                </p><br>
+                地址：<a href="address">银河市地球村中国区阿秋的小窝</a><br>
+                电话：<a href="tel">10086</a><br>
+                邮箱：<a href="mailto">111111@qq.com</a>
             </div>
         </div>
     </div>
 
-    <div id="footer"> 
+    <div id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-8 col-xs-8">
-                    
                 </div>
                 <div id="footer_img" class="col-md-4 col-sm-4 col-xs-4">
                     <img src="img/qq.jpg" alt="">
@@ -75,6 +99,11 @@
             </p>
         </div>
     </div>
+<script>
+    $(function(){
+        baiduMap('baiduMap_box');
+    });
+</script>
 </body>
 
 </html>
