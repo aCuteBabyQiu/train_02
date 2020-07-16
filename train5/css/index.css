@@ -18,8 +18,12 @@ p{
      text-indent: 2em;  
 }
 #menu{
-    height: 200px;
+    height: 300px;
+    text-align: center;
     background-color: rgba(243, 242, 242, 0.795);
+}
+#img1,#img2,#img3{
+    width: 70%;
 }
 #caipin{
     text-align: center;
