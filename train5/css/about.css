@@ -56,7 +56,10 @@
     text-indent: 2em;
     text-align: justify;
 }
-
+#idnav{
+    background-color: rgba(243, 242, 242, 0.795);
+    border: none;
+}
 
 
 

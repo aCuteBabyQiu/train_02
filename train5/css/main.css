@@ -7,6 +7,10 @@
 #id1{
     margin-top: 30px;
 }
+#idnav{
+    background-color: rgba(243, 242, 242, 0.795);
+    border: none;
+}
 #hrr{
     border: 10px solid black;
     width: 100%;
