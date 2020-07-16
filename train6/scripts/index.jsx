@@ -153,12 +153,12 @@ class App extends React.Component {
                             size="sm"
                             role="status"
                             aria-hidden="true"
-                        />} 加载更多</Button>
+                        />} 加载中</Button>
                     </div>
                 </Content>
                 <Footer>
                     <div className="text-center text-black jumbotron bg-light">
-                        <h5>版权所有 &copy; chm</h5>
+                        <h5>版权所有 &copy; 阿秋</h5>
                     </div>
                 </Footer>
             </div>
