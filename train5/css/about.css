@@ -60,7 +60,10 @@
     background-color: rgba(243, 242, 242, 0.795);
     border: none;
 }
-
+#ft-text >div{
+    margin-left: 100px;
+    
+}
 
 
 

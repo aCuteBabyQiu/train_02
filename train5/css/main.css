@@ -56,6 +56,10 @@
     margin: 0;
    padding-top: 20px;
 }
+#ft-text >div{
+    margin-left: 100px;
+    
+}
 @media screen and (min-width: 1200px){
     #pp1,#pp2,#pp3,#pp4,#pp5,#pp6,#pp7,#pp8{
         font-size: 14px;
